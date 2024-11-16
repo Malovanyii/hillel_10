@@ -19,3 +19,24 @@ function evenNumbers(numbers) {
 }
 
 console.log(newArr);
+
+// ДЗ 10.3. Книга контактів
+const contacts = {
+    users: [
+        { name: 'Valentin', phoneNumber: '+3800000000001', mail: 'valentin@example.com' },
+        { name: 'Alex', phoneNumber: '+3800000000002', mail: 'alex@example.com' },
+        { name: 'Popov', phoneNumber: '+3800000000003', mail: 'popov@example.com' },
+    ],
+
+    findContacts: function (findUser) {
+        return this.users.find(user => user.name === findUser);
+    },
+
+    addContact: function (name, phoneNumber, mail) {
+        this.users.push({ name, phoneNumber, mail });
+        return this.users;
+    }
+}
+
+console.log(contacts.findContacts('Popov'));
+console.log(contacts.addContact("Vlad", "+3800000000004", "vlad@example.com"));
