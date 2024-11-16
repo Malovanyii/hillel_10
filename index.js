@@ -9,3 +9,13 @@ const person = {
 };
 
 console.log(person.getInfo());
+
+// ДЗ 10.2. Отримання парних чисел з масиву
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+const newArr = arr.filter(evenNumbers);
+
+function evenNumbers(numbers) {
+    return numbers % 2 === 0;
+}
+
+console.log(newArr);
